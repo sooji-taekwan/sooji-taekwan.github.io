@@ -1,0 +1,1750 @@
+<!DOCTYPE html>
+<html lang="en" class=" js rgba boxshadow csstransitions desktop    landscape">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style>.gm-control-active > img {
+        box-sizing: content-box;
+        display: none;
+        left: 50%;
+        pointer-events: none;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%)
+    }
+
+    .gm-control-active > img:nth-child(1) {
+        display: block
+    }
+
+    .gm-control-active:focus > img:nth-child(1), .gm-control-active:hover > img:nth-child(1), .gm-control-active:active > img:nth-child(1), .gm-control-active:disabled > img:nth-child(1) {
+        display: none
+    }
+
+    .gm-control-active:focus > img:nth-child(2), .gm-control-active:hover > img:nth-child(2) {
+        display: block
+    }
+
+    .gm-control-active:active > img:nth-child(3) {
+        display: block
+    }
+
+    .gm-control-active:disabled > img:nth-child(4) {
+        display: block
+    }
+    </style>
+    <style>.gm-style .gm-style-cc a, .gm-style .gm-style-cc button, .gm-style .gm-style-cc span, .gm-style .gm-style-mtc div {
+        font-size: 10px;
+        box-sizing: border-box
+    }
+
+    .gm-style .gm-style-cc a, .gm-style .gm-style-cc button, .gm-style .gm-style-cc span {
+        outline-offset: 3px
+    }
+    </style>
+    <style>@media print {
+        .gm-style .gmnoprint, .gmnoprint {
+            display: none
+        }
+    }
+
+    @media screen {
+        .gm-style .gmnoscreen, .gmnoscreen {
+            display: none
+        }
+    }</style>
+    <style>.dismissButton {
+        background-color: #fff;
+        border: 1px solid #dadce0;
+        color: #1a73e8;
+        border-radius: 4px;
+        font-family: Roboto, sans-serif;
+        font-size: 14px;
+        height: 36px;
+        cursor: pointer;
+        padding: 0 24px
+    }
+
+    .dismissButton:hover {
+        background-color: rgba(66, 133, 244, .04);
+        border: 1px solid #d2e3fc
+    }
+
+    .dismissButton:focus {
+        background-color: rgba(66, 133, 244, .12);
+        border: 1px solid #d2e3fc;
+        outline: 0
+    }
+
+    .dismissButton:focus:not(:focus-visible) {
+        background-color: #fff;
+        border: 1px solid #dadce0;
+        outline: none
+    }
+
+    .dismissButton:focus-visible {
+        background-color: rgba(66, 133, 244, .12);
+        border: 1px solid #d2e3fc;
+        outline: 0
+    }
+
+    .dismissButton:hover:focus {
+        background-color: rgba(66, 133, 244, .16);
+        border: 1px solid #d2e2fd
+    }
+
+    .dismissButton:hover:focus:not(:focus-visible) {
+        background-color: rgba(66, 133, 244, .04);
+        border: 1px solid #d2e3fc
+    }
+
+    .dismissButton:hover:focus-visible {
+        background-color: rgba(66, 133, 244, .16);
+        border: 1px solid #d2e2fd
+    }
+
+    .dismissButton:active {
+        background-color: rgba(66, 133, 244, .16);
+        border: 1px solid #d2e2fd;
+        box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .3), 0 1px 3px 1px rgba(60, 64, 67, .15)
+    }
+
+    .dismissButton:disabled {
+        background-color: #fff;
+        border: 1px solid #f1f3f4;
+        color: #3c4043
+    }
+    </style>
+    <style>.gm-ui-hover-effect {
+        opacity: .6
+    }
+
+    .gm-ui-hover-effect:hover {
+        opacity: 1
+    }
+
+    .gm-ui-hover-effect > span {
+        background-color: #000
+    }
+
+    @media (forced-colors: active),(prefers-contrast: more) {
+        .gm-ui-hover-effect > span {
+            background-color: ButtonText
+        }
+    }
+    </style>
+    <style>.gm-style .transit-container {
+        background-color: white;
+        max-width: 265px;
+        overflow-x: hidden
+    }
+
+    .gm-style .transit-container .transit-title span {
+        font-size: 14px;
+        font-weight: 500
+    }
+
+    .gm-style .transit-container .transit-title {
+        padding-bottom: 6px
+    }
+
+    .gm-style .transit-container .transit-wheelchair-icon {
+        background: transparent url('https://maps.gstatic.com/mapfiles/api-3/images/mapcnt6.png');
+        background-size: 59px 492px;
+        display: inline-block;
+        background-position: -5px -450px;
+        width: 13px;
+        height: 13px
+    }
+
+    @media (-webkit-min-device-pixel-ratio: 1.2),(min-resolution: 1.2dppx),(min-resolution: 116dpi) {
+        .gm-style .transit-container .transit-wheelchair-icon {
+            background-image: url('https://maps.gstatic.com/mapfiles/api-3/images/mapcnt6_hdpi.png');
+            background-size: 59px 492px;
+            display: inline-block;
+            background-position: -5px -449px;
+            width: 13px;
+            height: 13px
+        }
+
+        .gm-style.gm-china .transit-container .transit-wheelchair-icon {
+            background-image: url('http://maps.gstatic.cn/mapfiles/api-3/images/mapcnt6_hdpi.png')
+        }
+    }
+
+    .gm-style .transit-container div {
+        background-color: white;
+        font-size: 11px;
+        font-weight: 300;
+        line-height: 15px
+    }
+
+    .gm-style .transit-container .transit-line-group {
+        overflow: hidden;
+        margin-right: -6px
+    }
+
+    .gm-style .transit-container .transit-line-group-separator {
+        border-top: 1px solid #e6e6e6;
+        padding-top: 5px
+    }
+
+    .gm-style .transit-container .transit-nlines-more-msg {
+        color: #999;
+        margin-top: -3px;
+        padding-bottom: 6px
+    }
+
+    .gm-style .transit-container .transit-line-group-vehicle-icons {
+        display: inline-block;
+        padding-right: 10px;
+        vertical-align: top;
+        margin-top: 1px
+    }
+
+    .gm-style .transit-container .transit-line-group-content {
+        display: inline-block;
+        min-width: 100px;
+        max-width: 228px;
+        margin-bottom: -3px
+    }
+
+    .gm-style .transit-container .transit-clear-lines {
+        clear: both
+    }
+
+    .gm-style .transit-container .transit-div-line-name {
+        float: left;
+        padding: 0 6px 6px 0;
+        white-space: nowrap
+    }
+
+    .gm-style .transit-container .transit-div-line-name .gm-transit-long {
+        width: 107px
+    }
+
+    .gm-style .transit-container .transit-div-line-name .gm-transit-medium {
+        width: 50px
+    }
+
+    .gm-style .transit-container .transit-div-line-name .gm-transit-short {
+        width: 37px
+    }
+
+    .gm-style .transit-div-line-name .renderable-component-icon {
+        float: left;
+        margin-right: 2px
+    }
+
+    .gm-style .transit-div-line-name .renderable-component-color-box {
+        background-image: url(https://maps.gstatic.com/mapfiles/transparent.png);
+        height: 10px;
+        width: 4px;
+        float: left;
+        margin-top: 3px;
+        margin-right: 3px;
+        margin-left: 1px
+    }
+
+    .gm-style.gm-china .transit-div-line-name .renderable-component-color-box {
+        background-image: url(http://maps.gstatic.cn/mapfiles/transparent.png)
+    }
+
+    .gm-style .transit-div-line-name .renderable-component-text {
+        text-align: left;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: block
+    }
+
+    .gm-style .transit-div-line-name .renderable-component-text-box {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: block;
+        font-size: 8pt;
+        font-weight: 400;
+        text-align: center;
+        padding: 1px 2px
+    }
+
+    .gm-style .transit-div-line-name .renderable-component-text-box-white {
+        border: solid 1px #ccc;
+        background-color: white;
+        padding: 0 2px
+    }
+
+    .gm-style .transit-div-line-name .renderable-component-bold {
+        font-weight: 400
+    }
+    </style>
+    <style>.poi-info-window div, .poi-info-window a {
+        color: #333;
+        font-family: Roboto, Arial;
+        font-size: 13px;
+        background-color: white;
+        -moz-user-select: text;
+        -webkit-user-select: text;
+        -ms-user-select: text;
+        user-select: text
+    }
+
+    .poi-info-window {
+        cursor: default
+    }
+
+    .poi-info-window a:link {
+        text-decoration: none;
+        color: #1a73e8
+    }
+
+    .poi-info-window .view-link, .poi-info-window a:visited {
+        color: #1a73e8
+    }
+
+    .poi-info-window .view-link:hover, .poi-info-window a:hover {
+        cursor: pointer;
+        text-decoration: underline
+    }
+
+    .poi-info-window .full-width {
+        width: 180px
+    }
+
+    .poi-info-window .title {
+        overflow: hidden;
+        font-weight: 500;
+        font-size: 14px
+    }
+
+    .poi-info-window .address {
+        margin-top: 2px;
+        color: #555
+    }
+    </style>
+    <style>.gm-style .gm-style-iw {
+        font-weight: 300;
+        font-size: 13px;
+        overflow: hidden
+    }
+
+    .gm-style .gm-style-iw-a {
+        position: absolute;
+        width: 9999px;
+        height: 0
+    }
+
+    .gm-style .gm-style-iw-t {
+        position: absolute;
+        width: 100%
+    }
+
+    .gm-style .gm-style-iw-t::after {
+        background: linear-gradient(45deg, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 51%, rgba(255, 255, 255, 0) 100%) #fff;
+        box-shadow: -2px 2px 2px 0 rgba(178, 178, 178, .4);
+        content: "";
+        height: 15px;
+        left: 0;
+        position: absolute;
+        top: 0;
+        transform: translate(-50%, -50%) rotate(-45deg);
+        width: 15px
+    }
+
+    .gm-style .gm-style-iw-c {
+        position: absolute;
+        box-sizing: border-box;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        transform: translate3d(-50%, -100%, 0);
+        background-color: white;
+        border-radius: 8px;
+        padding: 12px;
+        box-shadow: 0 2px 7px 1px rgba(0, 0, 0, .3)
+    }
+
+    .gm-style .gm-style-iw-d {
+        box-sizing: border-box;
+        overflow: auto
+    }
+
+    .gm-style .gm-style-iw-d::-webkit-scrollbar {
+        width: 18px;
+        height: 12px;
+        -webkit-appearance: none
+    }
+
+    .gm-style .gm-style-iw-d::-webkit-scrollbar-track, .gm-style .gm-style-iw-d::-webkit-scrollbar-track-piece {
+        background: #fff
+    }
+
+    .gm-style .gm-style-iw-c .gm-style-iw-d::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, .12);
+        border: 6px solid transparent;
+        border-radius: 9px;
+        background-clip: content-box
+    }
+
+    .gm-style .gm-style-iw-c .gm-style-iw-d::-webkit-scrollbar-thumb:horizontal {
+        border: 3px solid transparent
+    }
+
+    .gm-style .gm-style-iw-c .gm-style-iw-d::-webkit-scrollbar-thumb:hover {
+        background-color: rgba(0, 0, 0, .3)
+    }
+
+    .gm-style .gm-style-iw-c .gm-style-iw-d::-webkit-scrollbar-corner {
+        background: transparent
+    }
+
+    .gm-style .gm-iw {
+        color: #2c2c2c
+    }
+
+    .gm-style .gm-iw b {
+        font-weight: 400
+    }
+
+    .gm-style .gm-iw a:link, .gm-style .gm-iw a:visited {
+        color: #4272db;
+        text-decoration: none
+    }
+
+    .gm-style .gm-iw a:hover {
+        color: #4272db;
+        text-decoration: underline
+    }
+
+    .gm-style .gm-iw .gm-title {
+        font-weight: 400;
+        margin-bottom: 1px
+    }
+
+    .gm-style .gm-iw .gm-basicinfo {
+        line-height: 18px;
+        padding-bottom: 12px
+    }
+
+    .gm-style .gm-iw .gm-website {
+        padding-top: 6px
+    }
+
+    .gm-style .gm-iw .gm-photos {
+        padding-bottom: 8px;
+        -ms-user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none
+    }
+
+    .gm-style .gm-iw .gm-sv, .gm-style .gm-iw .gm-ph {
+        cursor: pointer;
+        height: 50px;
+        width: 100px;
+        position: relative;
+        overflow: hidden
+    }
+
+    .gm-style .gm-iw .gm-sv {
+        padding-right: 4px
+    }
+
+    .gm-style .gm-iw .gm-wsv {
+        cursor: pointer;
+        position: relative;
+        overflow: hidden
+    }
+
+    .gm-style .gm-iw .gm-sv-label, .gm-style .gm-iw .gm-ph-label {
+        cursor: pointer;
+        position: absolute;
+        bottom: 6px;
+        color: #fff;
+        font-weight: 400;
+        text-shadow: rgba(0, 0, 0, .7) 0 1px 4px;
+        font-size: 12px
+    }
+
+    .gm-style .gm-iw .gm-stars-b, .gm-style .gm-iw .gm-stars-f {
+        height: 13px;
+        font-size: 0
+    }
+
+    .gm-style .gm-iw .gm-stars-b {
+        position: relative;
+        background-position: 0 0;
+        width: 65px;
+        top: 3px;
+        margin: 0 5px
+    }
+
+    .gm-style .gm-iw .gm-rev {
+        line-height: 20px;
+        -ms-user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none
+    }
+
+    .gm-style .gm-iw .gm-numeric-rev {
+        font-size: 16px;
+        color: #dd4b39;
+        font-weight: 400
+    }
+
+    .gm-style .gm-iw.gm-transit {
+        margin-left: 15px
+    }
+
+    .gm-style .gm-iw.gm-transit td {
+        vertical-align: top
+    }
+
+    .gm-style .gm-iw.gm-transit .gm-time {
+        white-space: nowrap;
+        color: #676767;
+        font-weight: bold
+    }
+
+    .gm-style .gm-iw.gm-transit img {
+        width: 15px;
+        height: 15px;
+        margin: 1px 5px 0 -20px;
+        float: left
+    }
+    </style>
+    <style>.gm-iw {
+        text-align: left;
+    }
+
+    .gm-iw .gm-numeric-rev {
+        float: left;
+    }
+
+    .gm-iw .gm-photos, .gm-iw .gm-rev {
+        direction: ltr;
+    }
+
+    .gm-iw .gm-stars-f, .gm-iw .gm-stars-b {
+        background: url("https://maps.gstatic.com/mapfiles/api-3/images/review_stars_hdpi.png") no-repeat;
+        background-size: 65px 26px;
+        float: left;
+    }
+
+    .gm-iw .gm-stars-f {
+        background-position: left -13px;
+    }
+
+    .gm-iw .gm-sv-label, .gm-iw .gm-ph-label {
+        left: 4px;
+    }</style>
+    <link type="text/css" rel="stylesheet" href="./resources/css">
+    <link type="text/css" rel="stylesheet" href="./resources/css(1)">
+    <style>.gm-style-moc {
+        background-color: rgba(0, 0, 0, .45);
+        pointer-events: none;
+        text-align: center;
+        transition: opacity ease-in-out
+    }
+
+    .gm-style-mot {
+        color: white;
+        font-family: Roboto, Arial, sans-serif;
+        font-size: 22px;
+        margin: 0;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%)
+    }
+    </style>
+    <style>.gm-style img {
+        max-width: none;
+    }
+
+    .gm-style {
+        font: 400 11px Roboto, Arial, sans-serif;
+        text-decoration: none;
+    }</style>
+
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="description" content="FOREVER - Responsive HTML Wedding Template">
+    <meta name="author" content="www.dethemes.com">
+    <meta name="ROBOTS" content="NOINDEX">
+    <title>FOREVER - Responsive HTML Wedding Template</title>
+
+    <link rel="icon" href="http://demo.dethemes.com/forever/versions/onepage/images/favicon.jpg">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./resources/bootstrap.min.css" type="text/css" media="screen">
+    <!-- Pace -->
+    <link rel="stylesheet" href="./resources/preloader.css" media="screen">
+    <link rel="stylesheet" href="./resources/preloader-default.css" media="screen">
+    <!-- Flexslider -->
+    <link rel="stylesheet" href="./resources/flexslider.css" type="text/css">
+    <!-- Animate -->
+    <link rel="stylesheet" href="./resources/animate.css" type="text/css">
+    <!-- Countdown -->
+    <link rel="stylesheet" href="./resources/jquery.countdown.css" type="text/css">
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="./resources/magnific-popup.css" type="text/css">
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="./resources/owl.carousel.css" type="text/css">
+    <link rel="stylesheet" href="./resources/owl.theme.css" type="text/css">
+    <!-- Icon -->
+    <link rel="stylesheet" href="./resources/fontello.css" type="text/css" media="screen">
+    <!-- Font -->
+    <link href="http://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Arvo:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css">
+
+    <!-- Theme CSS -->
+    <link href="./resources/style.css" rel="stylesheet" media="screen">
+
+    <!-- Skin CSS -->
+    <!-- <link href="css/skin/light-teal/light-teal.css" rel="stylesheet" media="screen"> -->
+    <!-- <link href="css/skin/light-teal/light-teal-reverse-navbar.css" rel="stylesheet" media="screen"> -->
+    <!-- <link href="css/skin/pattern/pattern-1.css" rel="stylesheet" media="screen"> -->
+
+
+    <style data-emotion="css" data-s=""></style>
+    <!--    <script type="text/javascript" charset="UTF-8" src="./resources/common.js"></script>-->
+    <!--    <script type="text/javascript" charset="UTF-8" src="./resources/util.js"></script>-->
+    <!--    <script type="text/javascript" charset="UTF-8" src="./resources/map.js"></script>-->
+    <!--    <script type="text/javascript" charset="UTF-8" src="./resources/marker.js"></script>-->
+    <!--    <script type="text/javascript" charset="UTF-8" src="./resources/overlay.js"></script>-->
+    <!--    <script type="text/javascript" charset="UTF-8" src="./resources/infowindow.js"></script>-->
+    <!--    <script type="text/javascript" charset="UTF-8" src="./resources/controls.js"></script>-->
+    <!--    <script type="text/javascript" charset="UTF-8" src="./resources/onion.js"></script>-->
+    <link rel="stylesheet skin" href="./resources/coral.css" type="text/css">
+</head>
+
+<body class="outside-bottom-bar-page  pace-done">
+<div class="pace  pace-inactive">
+    <div class="pace-progress" data-progress-text="100%" data-progress="99" style="transform: translate3d(100%, 0px, 0px);">
+        <div class="pace-progress-inner"></div>
+    </div>
+    <div class="pace-activity"></div>
+</div>
+<!--PRELOADER-->
+<div id="preloader" style="display: none;">
+
+    <div class="alignment">
+        <div class="v-align center-middle">
+
+            <!-- LEFT HEART -->
+            <div class="heart-animation">
+                <i class="de-icon-heart"></i>
+            </div>
+
+            <!-- RIGHT HEART -->
+            <div class="heart-animation-reverse">
+                <i class="de-icon-heart"></i>
+            </div>
+
+        </div>
+    </div>
+
+</div> <!--END of PRELOADER-->
+
+
+<!-- MAIN SLIDER -->
+<section id="main-slider" class="flexslider fullscreen" style="height: 887px;">
+
+    <!-- MAIN SLIDER TITLE OUTTER WRAPPER -->
+    <div class="slide-title-outter-wrapper">
+
+        <!-- MAIN SLIDER TITLE INNER WRAPPER -->
+        <div class="slide-title-inner-wrapper">
+
+            <!-- TITLE 2 -->
+            <div class="slide-title align-middle">
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-offset-3 col-md-6 animation delay1 fadeInUp animated" style="visibility: visible;">
+
+                            <div id="invited">
+                                결혼합니다.
+                            </div>
+                            <div class="banner-text withlove medium light">
+                                <h2>유난히 이쁜 수지를<br>
+                                유난히도 좋아하던 태관이가<br>
+                                결혼을 합니다.
+                            </div>
+                            <div id="banner-date">
+                                2022. 10. 01<br>
+                                NAVER 1784 SKY HALL
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div><!-- END of MAIN SLIDER TITLE INNER WRAPPER -->
+
+    </div> <!-- END of MAIN SLIDER TITLE OUTTER WRAPPER -->
+
+    <!-- MAIN SLIDER IMAGES -->
+
+    <ul class="slides">
+        <li class="flex-active-slide" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: block; z-index: 2;">
+            <!-- SLIDE IMAGE -->
+            <div data-stellar-ratio="0.5" class="slide-image" style="background-image:url(images/slide-image-1920-i.jpg); background-position:top center">
+            </div>
+
+            <!-- SLIDE OVERLAY -->
+            <div class="slide-overlay" style="opacity:0"></div>
+
+        </li>
+    </ul><!-- END of MAIN SLIDER IMAGES -->
+
+    <!-- NAVIGATION -->
+    <header id="nav-header">
+        <nav id="nav-bar" class="bottom-bar outside fluid-width block-color nav-center sticky-nav animation fadeIn animated" style="visibility: visible;">
+
+            <div id="nav-wrapper">
+
+                <!-- LOGO -->
+                <div class="logo-wrapper">
+                    <!-- CSS LOGO -->
+                    <a href="http://demo.dethemes.com/forever/versions/onepage/index.html">
+                        <div class="css-logo rounded">
+                            <div class="css-logo-text">
+                                <strong>G</strong><i class="de-icon-heart-1"></i><strong>D</strong>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- IMG LOGO 
+                    <div class="img-logo">
+                        <img src="images/slide1.jpg">
+                    </div>-->
+                </div>
+                <!-- END of LOGO -->
+
+                <div id="mobile-nav">
+                    <i class="de-icon-menu"></i>
+                </div>
+
+                <ul id="nav-menu" class="nav-smooth-scroll">
+                    <li class="first-child">
+                        <a href="http://demo.dethemes.com/forever/versions/onepage/index.html#main-slider">HOME</a>
+                    </li>
+                    <li>
+                        <a href="http://demo.dethemes.com/forever/versions/onepage/index.html#our-story">STORY</a>
+                    </li>
+                    <li>
+                        <a href="http://demo.dethemes.com/forever/versions/onepage/index.html#where-when">WHERE &amp; WHEN</a>
+                    </li>
+                    <li>
+                        <a href="http://demo.dethemes.com/forever/versions/onepage/index.html#gallery-section">GALLERY</a>
+                    </li>
+                    <li class="first-child split-margin">
+                        <a href="http://demo.dethemes.com/forever/versions/onepage/index.html#more-events">EVENTS</a>
+                    </li>
+                    <li>
+                        <a href="http://demo.dethemes.com/forever/versions/onepage/index.html#groomsmen-section">GROOMSMEN</a>
+                    </li>
+                    <li>
+                        <a href="http://demo.dethemes.com/forever/versions/onepage/index.html#bridesmaid-section">BRIDESMAID</a>
+                    </li>
+                    <li>
+                        <a href="http://demo.dethemes.com/forever/versions/onepage/index.html#rsvp-section">RSVP</a>
+                    </li>
+
+                </ul>
+
+                <div class="clearboth"></div>
+
+            </div>
+
+        </nav>
+    </header> <!-- END of NAVIGATION -->
+
+    <ul class="flex-direction-nav">
+        <li><a class="flex-prev flex-disabled" href="http://demo.dethemes.com/forever/versions/onepage/index.html#" tabindex="-1">Previous</a></li>
+        <li><a class="flex-next flex-disabled" href="http://demo.dethemes.com/forever/versions/onepage/index.html#" tabindex="-1">Next</a></li>
+    </ul>
+</section><!-- ENF of MAIN SLIDER -->
+
+
+<!--CONTENT SECTION-->
+<section id="content">
+
+    <!--COUPLE SECTION-->
+    <section id="couple">
+
+        <div class="container">
+            <div class="row">
+
+                <!-- SECTION CONTENT -->
+                <div class="col-md-6">
+
+                    <!--PHOTO-ITEM-->
+                    <div class="photo-item frame-border animation fadeInLeft animated" style="visibility: visible;">
+
+                        <!--PHOTO-->
+                        <img src="./resources/him2.jpg" alt="" class="hover-animation image-zoom-in">
+
+                        <!--PHOTO OVERLAY-->
+                        <div class="layer wh100 hidden-black-overlay hover-animation fade-in">
+                        </div><!--END of PHOTO OVERLAY-->
+
+                        <!--ICON LINK-->
+                        <div class="layer wh100 hidden-link hover-animation delay1 fade-in">
+                            <div class="alignment">
+                                <div class="v-align center-middle">
+
+                                    <a href="http://demo.dethemes.com/forever/versions/onepage/images/attachment-couple.jpg" class="magnific-zoom">
+                                        <div class="de-icon circle light medium-size inline">
+                                            <i class="de-icon-zoom-in"></i>
+                                        </div>
+                                    </a>
+
+                                    <a class="magnific-ajax" href="http://demo.dethemes.com/forever/versions/onepage/him.html">
+                                        <div class="de-icon circle light medium-size inline">
+                                            <i class="de-icon-link"></i>
+                                        </div>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div><!--END of ICON LINK-->
+
+                    </div><!--END of PHOTO-ITEM-->
+
+                    <div class="his-her-name">
+                        <h2 class="text-center">GERRARD<span class="last-name">-&nbsp;Leandro&nbsp;-</span></h2>
+                        <div class="heart-wrapper">
+                            <div class="de-icon circle medium-size custom-heart">
+                                <i class="de-icon-heart"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="blurb animation fadeInLeft text-center animated" style="visibility: visible;">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultrices malesuada ante quis pharetra. Nullam non bibendum dolor. Ut vel turpis accumsan,
+                        efficitur dolor fermentum, tincidunt metus. Etiam ut ultrices nibh. Etiam aliquam mauris non hendrerit faucibus. Proin pulvinar congue ex, vitae commodo.
+                        Phasellus condimentum, mi ut sodales gravida.
+                    </p>
+
+                </div>
+
+                <div class="col-md-6">
+
+                    <!--PHOTO-ITEM-->
+                    <div class="photo-item frame-border animation fadeInRight animated" style="visibility: visible;">
+
+                        <!--PHOTO-->
+                        <img src="./resources/her2.jpg" alt="" class="hover-animation image-zoom-in">
+
+                        <!--PHOTO OVERLAY-->
+                        <div class="layer wh100 hidden-black-overlay hover-animation fade-in">
+                        </div><!--END of PHOTO OVERLAY-->
+
+                        <!--ICON LINK-->
+                        <div class="layer wh100 hidden-link hover-animation delay1 fade-in">
+                            <div class="alignment">
+                                <div class="v-align center-middle">
+
+                                    <a href="http://demo.dethemes.com/forever/versions/onepage/images/attachment-couple.jpg" class="magnific-zoom">
+                                        <div class="de-icon circle light medium-size inline">
+                                            <i class="de-icon-zoom-in"></i>
+                                        </div>
+                                    </a>
+
+                                    <a class="magnific-ajax" href="http://demo.dethemes.com/forever/versions/onepage/her.html">
+                                        <div class="de-icon circle light medium-size inline">
+                                            <i class="de-icon-link"></i>
+                                        </div>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div><!--END of ICON LINK-->
+
+                    </div><!--END of PHOTO-ITEM-->
+
+                    <div class="his-her-name">
+                        <h2 class="text-center">DIANNE<span class="last-name">-&nbsp;Anna&nbsp;-</span></h2>
+                    </div>
+
+                    <p class="blurb animation fadeInRight text-center animated" style="visibility: visible;">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultrices malesuada ante quis pharetra. Nullam non bibendum dolor. Ut vel turpis accumsan,
+                        efficitur dolor fermentum, tincidunt metus. Etiam ut ultrices nibh. Etiam aliquam mauris non hendrerit faucibus. Proin pulvinar congue ex, vitae commodo.
+                        Phasellus condimentum, mi ut sodales gravida.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PHOTO DIVIDER -->
+    <section id="photo-divider">
+        <div class="image-divider fixed-height" style="background-image:url(images/parallax-image-3.jpg); height:600px" data-stellar-background-ratio="0.3">
+        </div>
+    </section>
+
+
+    <!-- OUR STORY SECTION -->
+    <section id="our-story">
+
+        <div class="container">
+
+            <!-- ROW-1 -->
+            <div class="row">
+
+                <!-- SECTION TITLE -->
+                <div class="col-sm-12 col-md-offset-2 col-md-8 text-center">
+
+                    <div class="section-title animation fadeInUp animated" style="visibility: visible;">
+                        <h2>
+                            OUR <img src="./resources/heart-icon.png" alt=""> STORY
+                        </h2>
+
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultrices malesuada ante quis pharetra. Nullam notn bibendum dolor. Ut vel turpis
+                            accumsan, efficitur dolor fermentum, tincidunt metus. Etiam ut ultrices nibh. Etiam aliquam mauris non hendrerit faucibus. Proin pulvinar congue ex,
+                            vitae
+                        </p>
+
+
+                    </div>
+                </div>
+            </div> <!-- END of ROW-1 -->
+
+
+            <!-- STORY ROW-1-->
+            <div class="row story-row">
+
+                <div class="col-sm-12 col-md-offset-1 col-md-4 text-center">
+                    <!--PHOTO-ITEM-->
+                    <div class="photo-item frame-border animation delay1 fadeInLeft animated" style="visibility: visible;">
+
+                        <!--PHOTO-->
+                        <img src="./resources/gallery-1.jpg" alt="" class="hover-animation image-zoom-in">
+
+                        <!--PHOTO OVERLAY-->
+                        <div class="layer wh100 hidden-black-overlay hover-animation fade-in">
+                        </div><!--END of PHOTO OVERLAY-->
+
+                        <!--ICON LINK-->
+                        <div class="layer wh100 hidden-link hover-animation delay1 fade-in">
+                            <div class="alignment">
+                                <div class="v-align center-middle">
+
+                                    <a href="http://demo.dethemes.com/forever/versions/onepage/images/attachment-1.jpg" class="magnific-zoom" title="Our First Met">
+                                        <div class="de-icon circle light medium-size inline">
+                                            <i class="de-icon-zoom-in"></i>
+                                        </div>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div><!--END of ICON LINK-->
+
+                    </div><!--END of PHOTO-ITEM-->
+                </div>
+
+                <div class="col-sm-12 col-md-2 text-center story-date-wrapper animation fadeIn animated" style="visibility: visible;">
+                    <div class="arrow-left"></div>
+                    <div class="story-date">
+                        <div class="date-only">23</div>
+                        <div class="month-year">03.12</div>
+                    </div>
+                    <div class="arrow-right"></div>
+                    <div class="clearboth"></div>
+                </div>
+
+                <div class="col-sm-12 col-md-4 animation delay1 fadeInRight animated" style="visibility: visible;">
+                    <h3>OUR FIRST MET</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultrices malesuada ante quis pharetra. Nullam notn bibendum dolor. Ut vel turpis accumsan,
+                        efficitur dolor fermentum, tincidunt metus. Etiam ut ultrices nibh. Etiam aliquam mauris non hendrerit faucibus. Proin pulvinar congue ex, vitae commodo.
+                        Phasellus condimentum, mi ut sodales gravida.</p>
+                </div>
+
+                <div class="vertical-line">
+                </div>
+
+            </div><!-- END of STORY ROW-1 -->
+
+            <!-- STORY ROW-2-->
+            <div class="row story-row">
+
+                <div class="col-sm-12 col-md-4 col-md-push-6 text-center">
+                    <!--PHOTO-ITEM-->
+                    <div class="photo-item frame-border animation delay1 fadeInLeft animated" style="visibility: visible;">
+
+                        <!--PHOTO-->
+                        <img src="./resources/gallery-9.jpg" alt="" class="hover-animation image-zoom-in">
+
+                        <!--PHOTO OVERLAY-->
+                        <div class="layer wh100 hidden-black-overlay hover-animation fade-in">
+                        </div><!--END of PHOTO OVERLAY-->
+
+                        <!--ICON LINK-->
+                        <div class="layer wh100 hidden-link hover-animation delay1 fade-in">
+                            <div class="alignment">
+                                <div class="v-align center-middle">
+
+                                    <a href="http://demo.dethemes.com/forever/versions/onepage/images/attachment-9.jpg" class="magnific-zoom" title="Our First Dating">
+                                        <div class="de-icon circle light medium-size inline">
+                                            <i class="de-icon-zoom-in"></i>
+                                        </div>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div><!--END of ICON LINK-->
+
+                    </div><!--END of PHOTO-ITEM-->
+                </div>
+
+                <div class="col-sm-12 col-md-2 text-center story-date-wrapper animation fadeIn animated" style="visibility: visible;">
+                    <div class="arrow-left"></div>
+                    <div class="story-date">
+                        <div class="date-only">19</div>
+                        <div class="month-year">06.12</div>
+                    </div>
+                    <div class="arrow-right"></div>
+                    <div class="clearboth"></div>
+                </div>
+
+                <div class="col-sm-12 col-md-4 col-md-pull-6 animation delay1 fadeInRight animated" style="visibility: visible;">
+                    <h3>OUR FIRST DATING</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultrices malesuada ante quis pharetra. Nullam notn bibendum dolor. Ut vel turpis accumsan,
+                        efficitur dolor fermentum, tincidunt metus. Etiam ut ultrices nibh. Etiam aliquam mauris non hendrerit faucibus. Proin pulvinar congue ex, vitae commodo.
+                        Phasellus condimentum, mi ut sodales gravida.</p>
+                </div>
+
+                <div class="vertical-line">
+                </div>
+
+            </div><!-- END of STORY ROW-2 -->
+
+            <!-- STORY ROW-3-->
+            <div class="row story-row">
+
+                <div class="col-md-offset-1 col-md-4 text-center">
+                    <!--PHOTO-ITEM-->
+                    <div class="photo-item frame-border animation delay1 fadeInLeft animated" style="visibility: visible;">
+
+                        <!--PHOTO-->
+                        <img src="./resources/gallery-2.jpg" alt="" class="hover-animation image-zoom-in">
+
+                        <!--PHOTO OVERLAY-->
+                        <div class="layer wh100 hidden-black-overlay hover-animation fade-in">
+                        </div><!--END of PHOTO OVERLAY-->
+
+                        <!--ICON LINK-->
+                        <div class="layer wh100 hidden-link hover-animation delay1 fade-in">
+                            <div class="alignment">
+                                <div class="v-align center-middle">
+
+                                    <a href="http://demo.dethemes.com/forever/versions/onepage/images/attachment-2.jpg" class="magnific-zoom" title="He Proposed">
+                                        <div class="de-icon circle light medium-size inline">
+                                            <i class="de-icon-zoom-in"></i>
+                                        </div>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div><!--END of ICON LINK-->
+
+                    </div><!--END of PHOTO-ITEM-->
+                </div>
+
+                <div class="col-md-2 text-center story-date-wrapper animation fadeIn animated" style="visibility: visible;">
+                    <div class="arrow-left"></div>
+                    <div class="story-date">
+                        <div class="date-only">12</div>
+                        <div class="month-year">09.14</div>
+                    </div>
+                    <div class="arrow-right"></div>
+                    <div class="clearboth"></div>
+                </div>
+
+                <div class="col-md-4 animation delay1 fadeInRight animated" style="visibility: visible;">
+                    <h3>HE PROPOSED</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultrices malesuada ante quis pharetra. Nullam notn bibendum dolor. Ut vel turpis accumsan,
+                        efficitur dolor fermentum, tincidunt metus. Etiam ut ultrices nibh. Etiam aliquam mauris non hendrerit faucibus. Proin pulvinar congue ex, vitae commodo.
+                        Phasellus condimentum, mi ut sodales gravida.</p>
+
+                </div>
+
+                <div class="vertical-line">
+                </div>
+
+            </div><!-- END of STORY ROW-3 -->
+
+            <!-- STORY ROW-4 -->
+            <div class="row story-row">
+
+                <div class="col-sm-12 col-md-4 col-md-push-6 text-center">
+                    <!--PHOTO-ITEM-->
+                    <div class="photo-item frame-border animation delay1 fadeInLeft animated" style="visibility: visible;">
+
+                        <!--PHOTO-->
+                        <img src="./resources/gallery-3.jpg" alt="" class="hover-animation image-zoom-in">
+
+                        <!--PHOTO OVERLAY-->
+                        <div class="layer wh100 hidden-black-overlay hover-animation fade-in">
+                        </div><!--END of PHOTO OVERLAY-->
+
+                        <!--ICON LINK-->
+                        <div class="layer wh100 hidden-link hover-animation delay1 fade-in">
+                            <div class="alignment">
+                                <div class="v-align center-middle">
+
+                                    <a href="http://demo.dethemes.com/forever/versions/onepage/images/attachment-3.jpg" class="magnific-zoom" title="Love Ring">
+                                        <div class="de-icon circle light medium-size inline">
+                                            <i class="de-icon-zoom-in"></i>
+                                        </div>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div><!--END of ICON LINK-->
+
+                    </div><!--END of PHOTO-ITEM-->
+                </div>
+
+                <div class="col-sm-12 col-md-2 text-center story-date-wrapper animation fadeIn animated" style="visibility: visible;">
+                    <div class="arrow-left"></div>
+                    <div class="story-date">
+                        <div class="date-only">19</div>
+                        <div class="month-year">10.14</div>
+                    </div>
+                    <div class="arrow-right"></div>
+                    <div class="clearboth"></div>
+                </div>
+
+                <div class="col-sm-12 col-md-4 col-md-pull-6 animation delay1 fadeInRight animated" style="visibility: visible;">
+                    <h3>LOVE RING</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultrices malesuada ante quis pharetra. Nullam notn bibendum dolor. Ut vel turpis accumsan,
+                        efficitur dolor fermentum, tincidunt metus. Etiam ut ultrices nibh. Etiam aliquam mauris non hendrerit faucibus. Proin pulvinar congue ex, vitae commodo.
+                        Phasellus condimentum, mi ut sodales gravida.</p>
+                </div>
+
+                <div class="vertical-line">
+                </div>
+
+            </div><!-- END of STORY ROW-4 -->
+
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div id="end-of-story" class="animation fadeInUp animated" style="visibility: visible;">
+                        <h2>AND TODAY... WE ARE GETTING MARRIED</h2>
+                        <div class="heart-divider">
+                            <span class="grey-line"></span>
+                            <i class="de-icon-heart pink-heart"></i>
+                            <i class="de-icon-heart grey-heart"></i>
+                            <span class="grey-line"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- END of CONTAINER -->
+
+    </section>
+
+    <!-- PHOTO DIVIDER -->
+    <section id="photo-divider-1">
+        <div class="image-divider fixed-height" style="background-image:url(images/slide-image-1920-d.jpg); height:500px" data-stellar-background-ratio="0.3">
+        </div>
+    </section>
+
+    <!-- WHERE WHEN SECTION -->
+    <section id="where-when">
+        <div class="container">
+
+            <!-- ROW-1 -->
+            <div class="row">
+
+                <!-- SECTION TITLE -->
+                <div class="col-md-offset-2 col-md-8 text-center">
+
+                    <div class="section-title animation fadeInUp animated" style="visibility: visible;">
+                        <h2>
+                            WHERE <span class="and">&amp;</span> WHERE
+                        </h2>
+
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultrices malesuada ante quis pharetra. Nullam notn bibendum dolor. Ut vel turpis
+                            accumsan, efficitur dolor fermentum, tincidunt metus. Etiam ut ultrices nibh. Etiam aliquam mauris non hendrerit faucibus. Proin pulvinar congue ex,
+                            vitae
+                        </p>
+
+
+                    </div>
+                </div>
+            </div> <!-- END of ROW-1 -->
+
+            <!-- ROW-2 -->
+            <div class="row">
+
+                <!-- SECTION TITLE -->
+                <div class="col-md-12 text-center">
+
+                    <div class="banner-text dark full animation fadeIn animated" style="visibility: visible;">
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <h3>AUGUST / 19TH / 2015</h3>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="border-column">
+                                    <h3>FIVE THIRTY IN THE EVENING</h3>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <h3>ST. FOXEGAN CHURCH</h3>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div> <!-- END of ROW-2 -->
+
+
+            <!-- ROW-3 -->
+            <div class="row">
+                <div class="col-md-6 animation fadeIn animated" style="visibility: visible;">
+
+                    <div class="de-icon circle small-size inline" style="background-color:#f0394d">
+                        <i class="de-icon-bell-alt"></i>
+                    </div>
+                    <h3 class="inline">CEREMONY</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultrices malesuada ante quis pharetra. Nullam non bibendum dolor. Ut vel turpis accumsan,
+                        efficitur dolor fermentum, tincidunt metus. Etiam ut ultrices nibh. Etiam aliquam mauris non hendrerit faucibus. Proin pulvinar congue</p>
+
+                    <div class="de-icon circle small-size inline" style="background-color:#f6700e">
+                        <i class="de-icon-food"></i>
+                    </div>
+                    <h3 class="inline">RECEPTION</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultrices malesuada ante quis pharetra. Nullam non bibendum dolor. Ut vel turpis accumsan,
+                        efficitur dolor fermentum, tincidunt metus. Etiam ut ultrices nibh. Etiam aliquam mauris non hendrerit faucibus. Proin pulvinar congue</p>
+
+                    <div class="de-icon circle small-size inline" style="background-color:#0d9a48">
+                        <i class="de-icon-home-1"></i>
+                    </div>
+                    <h3 class="inline">ACCOMODATION</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultrices malesuada ante quis pharetra. Nullam non bibendum dolor. Ut vel turpis accumsan,
+                        efficitur dolor fermentum, tincidunt metus. Etiam ut ultrices nibh. Etiam aliquam mauris non hendrerit faucibus. Proin pulvinar congue</p>
+
+                </div>
+
+
+            </div> <!-- END of ROW-3 -->
+
+
+        </div>
+    </section>
+
+    <section id="attending">
+        <div class="image-divider auto-height" style="background-image:url(images/parallax-image-4.jpg);" data-stellar-background-ratio="0.3">
+
+            <div class="divider-overlay"></div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-offset-2 col-md-8 text-center">
+
+
+                        <div class="banner-text withlove large light animation fadeInUp animated" style="visibility: visible;">
+                            <h2 class="h1">ARE YOU ATTENDING?</h2>
+                        </div>
+
+
+                        <div class="text-center animation fadeInUp animated" style="visibility: visible;">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultrices malesuada ante quis pharetra. Nullam non bibendum dolor. Ut vel turpis
+                                accumsan, efficitur dolor fermentum, tincidunt metus. Etiam ut ultrices nibh. Etiam aliquam mauris non hendrerit faucibus. Proin pulvinar congue ex,
+                                vitae commodo. Phasellus condimentum, mi ut sodales gravida.</p>
+                        </div>
+
+                        <div class="text-center">
+                            <a href="http://demo.dethemes.com/forever/versions/onepage/index.html#rsvp-section"
+                               class="smooth-scroll de-button outline medium animation fadeInUp animated" style="visibility: visible;">
+                                RSVP
+                            </a>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- GALLERY SECTION -->
+    <section id="gallery-section">
+
+        <div class="container">
+
+            <!-- ROW-1 -->
+            <div class="row">
+
+                <!-- SECTION TITLE -->
+                <div class="col-md-offset-2 col-md-8 text-center">
+
+                    <div class="section-title animation fadeInUp animated" style="visibility: visible;">
+                        <h2>
+                            OUR <img src="./resources/heart-icon.png" alt=""> GALLERY
+                        </h2>
+
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultrices malesuada ante quis pharetra. Nullam notn bibendum dolor. Ut vel turpis
+                            accumsan, efficitur dolor fermentum, tincidunt metus. Etiam ut ultrices nibh. Etiam aliquam mauris non hendrerit faucibus. Proin pulvinar congue ex,
+                            vitae
+                        </p>
+
+
+                    </div>
+                </div>
+            </div> <!-- END of ROW-1 -->
+
+
+            <div class="row">
+
+                <!--GALLERY-ITEM-1-->
+                <div class="col-md-4">
+                    <!--PHOTO-ITEM-->
+                    <div class="photo-item frame-border animation fadeIn animated" style="visibility: visible;">
+
+                        <!--PHOTO-->
+                        <img src="./resources/gallery-1.jpg" alt="" class="hover-animation image-zoom-rotate">
+
+                        <!--PHOTO OVERLAY-->
+                        <div class="layer wh100 hidden-black-overlay hover-animation fade-in">
+                        </div><!--END of PHOTO OVERLAY-->
+
+                        <!--ICON LINK-->
+                        <div class="layer wh100 hidden-link hover-animation delay1 fade-in">
+                            <div class="alignment">
+                                <div class="v-align center-middle">
+
+                                    <a href="http://demo.dethemes.com/forever/versions/onepage/images/attachment-1.jpg" class="magnific-zoom-gallery" title="Attachment-1">
+                                        <div class="de-icon circle light medium-size inline">
+                                            <i class="de-icon-zoom-in"></i>
+                                        </div>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div><!--END of ICON LINK-->
+
+                    </div><!--END of PHOTO-ITEM-->
+                </div><!--END of GALLERY-ITEM-1-->
+
+                <!--GALLERY-ITEM-2-->
+                <div class="col-md-4">
+                    <!--PHOTO-ITEM-->
+                    <div class="photo-item frame-border animation fadeIn animated" style="visibility: visible;">
+
+                        <!--PHOTO-->
+                        <img src="./resources/gallery-2.jpg" alt="" class="hover-animation image-zoom-rotate">
+
+                        <!--PHOTO OVERLAY-->
+                        <div class="layer wh100 hidden-black-overlay hover-animation fade-in">
+                        </div><!--END of PHOTO OVERLAY-->
+
+                        <!--ICON LINK-->
+                        <div class="layer wh100 hidden-link hover-animation delay1 fade-in">
+                            <div class="alignment">
+                                <div class="v-align center-middle">
+
+                                    <a href="http://demo.dethemes.com/forever/versions/onepage/images/attachment-2.jpg" class="magnific-zoom-gallery" title="Attachment-2">
+                                        <div class="de-icon circle light medium-size inline">
+                                            <i class="de-icon-zoom-in"></i>
+                                        </div>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div><!--END of ICON LINK-->
+
+                    </div><!--END of PHOTO-ITEM-->
+                </div><!--END of GALLERY-ITEM-2-->
+
+                <!--GALLERY-ITEM-3-->
+                <div class="col-md-4">
+                    <!--PHOTO-ITEM-->
+                    <div class="photo-item frame-border animation fadeIn animated" style="visibility: visible;">
+
+                        <!--PHOTO-->
+                        <img src="./resources/gallery-3.jpg" alt="" class="hover-animation image-zoom-rotate">
+
+                        <!--PHOTO OVERLAY-->
+                        <div class="layer wh100 hidden-black-overlay hover-animation fade-in">
+                        </div><!--END of PHOTO OVERLAY-->
+
+                        <!--ICON LINK-->
+                        <div class="layer wh100 hidden-link hover-animation delay1 fade-in">
+                            <div class="alignment">
+                                <div class="v-align center-middle">
+
+                                    <a href="http://demo.dethemes.com/forever/versions/onepage/images/attachment-3.jpg" class="magnific-zoom-gallery" title="Attachment-3">
+                                        <div class="de-icon circle light medium-size inline">
+                                            <i class="de-icon-zoom-in"></i>
+                                        </div>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div><!--END of ICON LINK-->
+
+                    </div><!--END of PHOTO-ITEM-->
+                </div><!--END of GALLERY-ITEM-3-->
+
+                <!--GALLERY-ITEM-4-->
+                <div class="col-md-4">
+                    <!--PHOTO-ITEM-->
+                    <div class="photo-item frame-border animation fadeIn animated" style="visibility: visible;">
+
+                        <!--PHOTO-->
+                        <img src="./resources/gallery-4.jpg" alt="" class="hover-animation image-zoom-rotate">
+
+                        <!--PHOTO OVERLAY-->
+                        <div class="layer wh100 hidden-black-overlay hover-animation fade-in">
+                        </div><!--END of PHOTO OVERLAY-->
+
+                        <!--ICON LINK-->
+                        <div class="layer wh100 hidden-link hover-animation delay1 fade-in">
+                            <div class="alignment">
+                                <div class="v-align center-middle">
+
+                                    <a href="http://demo.dethemes.com/forever/versions/onepage/images/attachment-4.jpg" class="magnific-zoom-gallery" title="Attachment-4">
+                                        <div class="de-icon circle light medium-size inline">
+                                            <i class="de-icon-zoom-in"></i>
+                                        </div>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div><!--END of ICON LINK-->
+
+                    </div><!--END of PHOTO-ITEM-->
+                </div><!--END of GALLERY-ITEM-4-->
+
+                <!--GALLERY-ITEM-5-->
+                <div class="col-md-4">
+                    <!--PHOTO-ITEM-->
+                    <div class="photo-item frame-border animation fadeIn animated" style="visibility: visible;">
+
+                        <!--PHOTO-->
+                        <img src="./resources/gallery-5.jpg" alt="" class="hover-animation image-zoom-rotate">
+
+                        <!--PHOTO OVERLAY-->
+                        <div class="layer wh100 hidden-black-overlay hover-animation fade-in">
+                        </div><!--END of PHOTO OVERLAY-->
+
+                        <!--ICON LINK-->
+                        <div class="layer wh100 hidden-link hover-animation delay1 fade-in">
+                            <div class="alignment">
+                                <div class="v-align center-middle">
+
+                                    <a href="http://demo.dethemes.com/forever/versions/onepage/images/attachment-5.jpg" class="magnific-zoom-gallery" title="Attachment-5">
+                                        <div class="de-icon circle light medium-size inline">
+                                            <i class="de-icon-zoom-in"></i>
+                                        </div>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div><!--END of ICON LINK-->
+
+                    </div><!--END of PHOTO-ITEM-->
+                </div><!--END of GALLERY-ITEM-5-->
+
+                <!--GALLERY-ITEM-6-->
+                <div class="col-md-4">
+                    <!--PHOTO-ITEM-->
+                    <div class="photo-item frame-border animation fadeIn animated" style="visibility: visible;">
+
+                        <!--PHOTO-->
+                        <img src="./resources/gallery-6.jpg" alt="" class="hover-animation image-zoom-rotate">
+
+                        <!--PHOTO OVERLAY-->
+                        <div class="layer wh100 hidden-black-overlay hover-animation fade-in">
+                        </div><!--END of PHOTO OVERLAY-->
+
+                        <!--ICON LINK-->
+                        <div class="layer wh100 hidden-link hover-animation delay1 fade-in">
+                            <div class="alignment">
+                                <div class="v-align center-middle">
+
+                                    <a href="http://demo.dethemes.com/forever/versions/onepage/images/attachment-6.jpg" class="magnific-zoom-gallery" title="Attachment-6">
+                                        <div class="de-icon circle light medium-size inline">
+                                            <i class="de-icon-zoom-in"></i>
+                                        </div>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div><!--END of ICON LINK-->
+
+                    </div><!--END of PHOTO-ITEM-->
+                </div><!--END of GALLERY-ITEM-6-->
+
+                <!--GALLERY-ITEM-7-->
+                <div class="col-md-4">
+                    <!--PHOTO-ITEM-->
+                    <div class="photo-item frame-border animation fadeIn animated" style="visibility: visible;">
+
+                        <!--PHOTO-->
+                        <img src="./resources/gallery-7.jpg" alt="" class="hover-animation image-zoom-rotate">
+
+                        <!--PHOTO OVERLAY-->
+                        <div class="layer wh100 hidden-black-overlay hover-animation fade-in">
+                        </div><!--END of PHOTO OVERLAY-->
+
+                        <!--ICON LINK-->
+                        <div class="layer wh100 hidden-link hover-animation delay1 fade-in">
+                            <div class="alignment">
+                                <div class="v-align center-middle">
+
+                                    <a href="http://demo.dethemes.com/forever/versions/onepage/images/attachment-7.jpg" class="magnific-zoom-gallery" title="Attachment-7">
+                                        <div class="de-icon circle light medium-size inline">
+                                            <i class="de-icon-zoom-in"></i>
+                                        </div>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div><!--END of ICON LINK-->
+
+                    </div><!--END of PHOTO-ITEM-->
+                </div><!--END of GALLERY-ITEM-7-->
+
+                <!--GALLERY-ITEM-8-->
+                <div class="col-md-4">
+                    <!--PHOTO-ITEM-->
+                    <div class="photo-item frame-border animation fadeIn animated" style="visibility: visible;">
+
+                        <!--PHOTO-->
+                        <img src="./resources/gallery-8.jpg" alt="" class="hover-animation image-zoom-rotate">
+
+                        <!--PHOTO OVERLAY-->
+                        <div class="layer wh100 hidden-black-overlay hover-animation fade-in">
+                        </div><!--END of PHOTO OVERLAY-->
+
+                        <!--ICON LINK-->
+                        <div class="layer wh100 hidden-link hover-animation delay1 fade-in">
+                            <div class="alignment">
+                                <div class="v-align center-middle">
+
+                                    <a href="http://demo.dethemes.com/forever/versions/onepage/images/attachment-8.jpg" class="magnific-zoom-gallery" title="Attachment-8">
+                                        <div class="de-icon circle light medium-size inline">
+                                            <i class="de-icon-zoom-in"></i>
+                                        </div>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div><!--END of ICON LINK-->
+
+                    </div><!--END of PHOTO-ITEM-->
+                </div><!--END of GALLERY-ITEM-8-->
+
+                <!--GALLERY-ITEM-9-->
+                <div class="col-md-4">
+                    <!--PHOTO-ITEM-->
+                    <div class="photo-item frame-border animation fadeIn animated" style="visibility: visible;">
+
+                        <!--PHOTO-->
+                        <img src="./resources/gallery-9.jpg" alt="" class="hover-animation image-zoom-rotate">
+
+                        <!--PHOTO OVERLAY-->
+                        <div class="layer wh100 hidden-black-overlay hover-animation fade-in">
+                        </div><!--END of PHOTO OVERLAY-->
+
+                        <!--ICON LINK-->
+                        <div class="layer wh100 hidden-link hover-animation delay1 fade-in">
+                            <div class="alignment">
+                                <div class="v-align center-middle">
+
+                                    <a href="http://demo.dethemes.com/forever/versions/onepage/images/attachment-9.jpg" class="magnific-zoom-gallery" title="Attachment-9">
+                                        <div class="de-icon circle light medium-size inline">
+                                            <i class="de-icon-zoom-in"></i>
+                                        </div>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div><!--END of ICON LINK-->
+
+                    </div><!--END of PHOTO-ITEM-->
+                </div><!--END of GALLERY-ITEM-9-->
+
+            </div>
+        </div>
+    </section>
+
+
+    <section id="dont-miss-it">
+        <div class="image-divider auto-height" style="background-image:url(images/slide-image-1920-c.jpg);" data-stellar-background-ratio="0.3">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-offset-2 col-md-8">
+
+                        <h2 id="dont-miss-it-title" class="text-center animation fadeInUp animated" style="visibility: visible;">Don't Miss It!</h2>
+
+                        <div class="text-center animation fadeInUp animated" style="visibility: visible;">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultrices malesuada ante quis pharetra. Nullam non bibendum dolor. Ut vel turpis
+                                accumsan, efficitur dolor fermentum, tincidunt metus. Etiam ut ultrices nibh. Etiam aliquam mauris non hendrerit faucibus. Proin pulvinar congue ex,
+                                vitae commodo. Phasellus condimentum, mi ut sodales gravida.</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-offset-3 col-md-6">
+                        <div id="date-countdown" class="circle-countdown animation fadeInUp is-countdown animated" style="visibility: visible;">
+                            <span class="countdown-row countdown-show5">
+                                <span class="countdown-section">
+                                    <span class="countdown-amount">0</span>
+                                    <span class="countdown-period">Weeks</span>
+                                </span><span class="countdown-section">
+                                <span class="countdown-amount">0</span>
+                                <span class="countdown-period">Days</span>
+                            </span>
+                                <span class="countdown-section">
+                                    <span class="countdown-amount">0</span>
+                                    <span class="countdown-period">Hours</span>
+                                </span>
+                                <span class="countdown-section">
+                                    <span class="countdown-amount">0</span>
+                                    <span class="countdown-period">Minutes</span>
+                                </span>
+                                <span class="countdown-section">
+                                    <span class="countdown-amount">0</span>
+                                    <span class="countdown-period">Seconds</span>
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PHOTO DIVIDER -->
+    <section id="photo-divider-2">
+        <div class="image-divider fixed-height" style="background-image:url(images/parallax-image-5.jpg); height:450px" data-stellar-background-ratio="0.3">
+        </div>
+    </section>
+
+    <!-- PHOTO DIVIDER -->
+    <section id="photo-divider-3">
+        <div class="image-divider fixed-height" style="background-image:url(images/parallax-image-6.jpg); height:450px" data-stellar-background-ratio="0.3">
+        </div>
+    </section>
+</section>
+
+<!-- FOOTER SECTION -->
+<footer>
+    <div class="image-divider fixed-height" style="background-image:url(images/slide-image-1920-h.jpg);" data-stellar-background-ratio="0.5">
+
+        <div class="divider-overlay"></div>
+
+        <!-- Use Center Middle Alignment to align middle the content for fixed-height parallax -->
+        <div class="alignment">
+            <div class="v-align center-middle">
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+
+                            <div class="animation fadeInUp animated" style="visibility: visible;">
+                                <div id="thank-you">
+                                    <div id="thank">Thank</div>
+                                    <div id="you">You</div>
+                                </div>
+                            </div>
+
+                            <div class="heart-divider animation delay1 fadeInUp animated" style="visibility: visible;">
+                                <span class="white-line"></span>
+                                <i class="de-icon-heart pink-heart"></i>
+                                <i class="de-icon-heart white-heart"></i>
+                                <span class="white-line"></span>
+                            </div>
+
+                            <div id="footer-couple-name" class="animation delay1 fadeInUp animated" style="visibility: visible;">
+                                GERRARD &amp; DIANNE
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+
+<!-- jQuery -->
+<script src="./resources/jquery-1.11.1.min.js"></script>
+<!-- Pace -->
+<script src="./resources/pace.min.js"></script>
+<!-- Bootstrap -->
+<script src="./resources/bootstrap.js"></script>
+<!-- Modernizr -->
+<script src="./resources/modernizr.js"></script>
+<!-- Device JS -->
+<script src="./resources/device.js"></script>
+<!-- TinyNav -->
+<script src="./resources/tinynav.min.js"></script>
+<!-- SmoothScroll -->
+<script src="./resources/jquery.smooth-scroll.js"></script>
+<!-- Flexslider -->
+<script src="./resources/jquery.flexslider.js"></script>
+<!-- Sticky -->
+<script src="./resources/jquery.sticky.js"></script>
+<!-- Waypoint -->
+<script src="./resources/jquery.waypoints.min.js"></script>
+<!-- DoubleTapToGo -->
+<script src="./resources/jquery.ui.widget.js"></script>
+<script src="./resources/jquery.dcd.doubletaptogo.js"></script>
+<!-- Vide -->
+<script src="./resources/jquery.vide.js"></script>
+<!-- Stellar -->
+<script src="./resources/jquery.stellar.js"></script>
+<!-- Masonry -->
+<script src="./resources/masonry.pkgd.min.js"></script>
+<!-- Countdown -->
+<script src="./resources/jquery.plugin.js"></script>
+<script src="./resources/jquery.countdown.js"></script>
+<!-- Magnific Popup -->
+<script src="./resources/jquery.magnific-popup.js"></script>
+<!-- Owl Carousel -->
+<script src="./resources/owl.carousel.js"></script>
+<!-- Google Map -->
+<!--<script src="https://maps.googleapis.com/maps/api/js"></script>-->
+<!--<script src="./resources/markerwithlabel.js"></script>-->
+<!-- RSVP -->
+<script src="./resources/rsvp.js"></script>
+
+<!-- Custom Core Script -->
+<script type="text/javascript" src="./resources/script.js"></script>
+<!--<script type="text/javascript" src="./resources/map-script.js"></script>-->
+<!-- Custom Additional Script -->
+<script type="text/javascript" src="./resources/main-slider-fade.js"></script>
+
+
+<div id="__endic_crx__">
+    <div class="css-1abc5oq"></div>
+</div>
+</body>
+</html>
