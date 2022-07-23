@@ -617,6 +617,7 @@
     <!--    <script type="text/javascript" charset="UTF-8" src="./resources/controls.js"></script>-->
     <!--    <script type="text/javascript" charset="UTF-8" src="./resources/onion.js"></script>-->
     <link rel="stylesheet skin" href="./resources/coral.css" type="text/css">
+    <link href="./resources/jquery-sakura.css" rel="stylesheet" type="text/css">
 </head>
 
 <body class="outside-bottom-bar-page  pace-done">
@@ -687,9 +688,8 @@
     </div> <!-- END of MAIN SLIDER TITLE OUTTER WRAPPER -->
 
     <!-- MAIN SLIDER IMAGES -->
-
     <ul class="slides">
-        <li class="flex-active-slide" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: block; z-index: 2;">
+        <li class="flex-active-slide2" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: block; ">
             <!-- SLIDE IMAGE -->
             <div data-stellar-ratio="0.5" class="slide-image" style="background-image:url(images/slide-image-1920-i.jpg); background-position:top center">
             </div>
@@ -1545,6 +1545,8 @@
 
 <!-- jQuery -->
 <script src="./resources/jquery-1.11.1.min.js"></script>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
+<script type="text/javascript" charset="UTF-8" src="./resources/jquery-sakura.min.js"></script>
 <!-- Pace -->
 <script src="./resources/pace.min.js"></script>
 <!-- Bootstrap -->
@@ -1591,6 +1593,10 @@
 <!-- Custom Additional Script -->
 <script type="text/javascript" src="./resources/main-slider-fade.js"></script>
 <script type="text/javascript">
+    $(window).load(function () {
+        $('body').sakura();
+    });
+
     function copy_to_clipboard(text) {
         navigator.clipboard.writeText(text).then(() => {
             alert("복사되었습니다.");
