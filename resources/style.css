@@ -1943,7 +1943,7 @@ a:hover .de-icon.effect3{
 
 .photo-item.frame-border {
 	background-color:#FFF; 
-	border:18px solid #FFF;
+	border:10px solid #FFF;
 }
 
 /* ----------------------------------------------*/
@@ -3840,5 +3840,4 @@ footer .image-divider.fixed-height{
 	color:#FFF; 
 	letter-spacing:3px; 
 	margin-top:10px;
-}
 }
