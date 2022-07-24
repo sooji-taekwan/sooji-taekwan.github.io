@@ -208,8 +208,11 @@ body{
 	font-size:15px;
 }
 
-h1,h2,h3,h4,h5,h6{
+h1,h4,h5,h6{
 	font-family: 'Oswald', sans-serif;
+}
+h2,h3{
+	font-family: BinggraeSamanco-Bold, serif;
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -265,10 +268,14 @@ h4.inline, h5.inline, h6.inline{
 }
 
 p{
-	font-family: 'Arvo', serif;	
+	font-family: Cafe24Oneprettynight, serif;
 	font-size:15px;
 	line-height:26px;
 	margin-bottom:25px;
+}
+
+p.desc{
+	font-family: GangwonEdu_OTFLightA, serif;
 }
 
 p.lead{
@@ -1576,7 +1583,7 @@ input[type=submit]:disabled, input[type=submit]:hover:disabled{
 /* ----------------------------------------------*/
 .banner-text{
 	display:inline-block;
-	font-family: 'Oswald', sans-serif; 
+	font-family: 'Oswald', sans-serif;
 	margin:auto;
 	margin-top:30px;
 	margin-bottom:30px; 	
@@ -1622,7 +1629,7 @@ input[type=submit]:disabled, input[type=submit]:hover:disabled{
 .banner-text.withlove{
 	position:relative;
 	display:inline-block;
-	font-family: 'Oswald', sans-serif;  
+	font-family: 'MapoFlowerIsland', sans-serif;
 	margin:auto;
 	margin-top:30px;
 	margin-bottom:30px;
@@ -2677,7 +2684,7 @@ footer .image-divider.fixed-height{
 }
 
 #banner-date{
-	font-family: 'Oswald', sans-serif; 
+	font-family: EarlyFontDiary, sans-serif;
 	letter-spacing:3px; 
 	font-size:14px;
 }
@@ -2696,7 +2703,7 @@ footer .image-divider.fixed-height{
 }
 
 .his-her-name .last-name{
-	font-family: 'Pacifico', cursive; 
+	font-family: 'GangwonEdu_OTFLightA', cursive;
 	font-size:24px; 
 	display:block; 
 	margin-top:0;
