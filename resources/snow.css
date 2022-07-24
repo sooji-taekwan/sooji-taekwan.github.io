@@ -1,0 +1,55 @@
+.bg-eff-base {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-animation: snow 16s linear infinite;
+    animation: snow 10s linear infinite;
+    pointer-events: none;
+    background-size: 600px auto
+}
+
+.forsythia-bg {
+    background-image: url(https://theirmood.com/src/img/bg-effect-forsythia-1.png), url(https://theirmood.com/src/img/img/bg-effect-forsythia-2.png)
+}
+
+.mist-bg {
+    background-image: url(https://theirmood.com/src/img/bg-effect-mist-1.png), url(https://theirmood.com/src/img/bg-effect-mist-2.png)
+}
+
+.snow-bg {
+    background-image: url(https://theirmood.com/src/img/bg-effect-sakura-1.png),url(https://theirmood.com/src/img/bg-effect-sakura-2.png);
+}
+
+.fall-bg {
+    background-image: url(https://theirmood.com/src/img/bg-effect-fall-1.png), url(https://theirmood.com/src/img/img/bg-effect-fall-2.png)
+}
+
+
+@-webkit-keyframes snow {
+    0% {
+        background-position: 0 0, 0 0, 0 0
+    }
+    50% {
+        background-position: 500px 500px, 100px 200px, -100px 150px
+    }
+    to {
+        background-position: 1000px 1000px, 200px 400px, -200px 300px
+    }
+}
+
+@keyframes snow {
+    0% {
+        background-position: 0 0, 0 0, 0 0
+    }
+    50% {
+        background-position: 500px 500px, 100px 200px, -100px 150px
+    }
+    to {
+        background-position: 1000px 1000px, 200px 400px, -200px 300px
+    }
+}

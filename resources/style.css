@@ -939,7 +939,7 @@ img.with-border{
 
 #main-slider .slides,
 #main-slider.flexslider .slides li{
-	position:sticky;
+	position:relative;
 	height:inherit;
 	width:100%;
 	overflow:hidden;
