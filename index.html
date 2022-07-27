@@ -69,7 +69,7 @@
 </head>
 
 <body class="outside-bottom-bar-page pace-done">
-<div class="bg-eff-base snow-bg" style="top:0px;width: 100vw;height: 8500px;z-index: 999">
+<div id="snow-bg" class="bg-eff-base snow-bg" style="top:0px;width: 100vw;height: 8500px;z-index: 999">
 </div>
 <div class="pace  pace-inactive">
     <div class="pace-progress" data-progress-text="100%" data-progress="99" style="transform: translate3d(100%, 0px, 0px);">
@@ -1109,7 +1109,11 @@
 <script type="text/javascript" src="./resources/main-slider-fade.js"></script>
 <script type="text/javascript">
     $(window).load(function () {
-        // $('body').sakura();
+        window.addEventListener('resize', start);
+        function start(){
+            document.getElementById('snow-bg').setAttribute('style','top:0px;width: 100vw;height:' + document.documentElement.offsetHeight +'px');
+        }
+        start();
     });
 
     function copy_to_clipboard(text) {
