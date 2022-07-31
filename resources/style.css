@@ -1948,9 +1948,11 @@ a:hover .de-icon.effect3{
 	overflow:hidden;
 }
 
+.col-md-4{
+	padding-left: 0px;
+	padding-right: 0px;
+}
 .photo-item.frame-border {
-	background-color:#FFF; 
-	border:10px solid #FFF;
 }
 
 /* ----------------------------------------------*/
@@ -2748,7 +2750,7 @@ footer .image-divider.fixed-height{
 
 .story-date{
 	float:left;
-	margin-left:16px;
+	margin-left:40px;
 	height:85px; 
 	width:85px; 
 	background-color:#f0394d; 
@@ -3086,7 +3088,8 @@ a:hover .navbar-setting-button,
 	background-color:#f0394d;
 	color:#FFF;
 	border-color:#f0394d;
-}	
+}
+
 
 
 
@@ -3464,7 +3467,7 @@ a:hover .navbar-setting-button,
 .story-date{
 	float:none;
 	position:absolute;	
-	top:-70px;
+	top:-55px;
 	left:0;
 	right:0;
 	margin:auto;
@@ -3847,4 +3850,32 @@ footer .image-divider.fixed-height{
 	color:#FFF; 
 	letter-spacing:3px; 
 	margin-top:10px;
+}
+
+
+
+
+.container2 {
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto
+}
+
+@media (min-width: 768px) {
+	.container2 {
+		width:750px
+	}
+}
+
+@media (min-width: 992px) {
+	.container2 {
+		width:970px
+	}
+}
+
+@media (min-width: 1200px) {
+	.container2 {
+		width:1170px
+	}
 }
