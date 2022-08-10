@@ -1653,8 +1653,8 @@ input[type=submit]:disabled, input[type=submit]:hover:disabled {
 
 .banner-text.light {
     color: #FFF;
-    border-top: medium double #fff;
-    border-bottom: medium double #fff;
+    border-top: ridge #fff;
+    border-bottom: ridge #fff;
 }
 
 .banner-text.light * {
@@ -1681,35 +1681,35 @@ input[type=submit]:disabled, input[type=submit]:hover:disabled {
     text-align: center
 }
 
-.banner-text.withlove:before {
-    display: block;
-    font-family: "fontello";
-    position: absolute;
-    font-size: 22px;
-    color: #FFF;
-    content: "\e806";
-    top: -17px;
-    left: 0;
-    right: 0;
-    margin-left: 19px;
-}
+/*.banner-text.withlove:before {*/
+/*    display: block;*/
+/*    font-family: "fontello";*/
+/*    position: absolute;*/
+/*    font-size: 22px;*/
+/*    color: #FFF;*/
+/*    content: "\e806";*/
+/*    top: -17px;*/
+/*    left: 0;*/
+/*    right: 0;*/
+/*    margin-left: 19px;*/
+/*}*/
 
 .banner-text.withlove.dark:before {
     color: #e1dddd;
 }
 
-.banner-text.withlove:after {
-    display: block;
-    font-family: "fontello";
-    position: absolute;
-    font-size: 22px;
-    color: #f0394d;
-    content: "\e806";
-    top: -17px;
-    left: 0;
-    right: 0;
-    margin-right: 19px;
-}
+/*.banner-text.withlove:after {*/
+/*    display: block;*/
+/*    font-family: "fontello";*/
+/*    position: absolute;*/
+/*    font-size: 22px;*/
+/*    color: #f0394d;*/
+/*    content: "\e806";*/
+/*    top: -17px;*/
+/*    left: 0;*/
+/*    right: 0;*/
+/*    margin-right: 19px;*/
+/*}*/
 
 
 /* 07.2.12 White Box Content Wrapper 			 */
