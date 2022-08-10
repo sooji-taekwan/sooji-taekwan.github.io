@@ -7,8 +7,7 @@
     <meta property="og:url" content="https://sooji-taekwan.github.io/"/>
     <meta property="og:description" content="권태관 ❤️ 김수지 의 결혼식에 초대합니다."/>
     <meta property="og:title" content="2022.10.01 1784 SKY HALL"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" >
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <link rel="stylesheet" href="./resources/snow.css">
@@ -958,6 +957,23 @@
         function start(){
             document.getElementById('snow-bg').setAttribute('style','top:0px;width: ' + document.documentElement.offsetWidth + ';height:' + document.documentElement.offsetHeight +'px');
         }
+
+        document.documentElement.addEventListener('touchstart', function (event) {
+            if (event.touches.length > 1) {
+                event.preventDefault();
+            }
+        }, false);
+
+        var lastTouchEnd = 0;
+
+        document.documentElement.addEventListener('touchend', function (event) {
+            var now = (new Date()).getTime();
+            if (now - lastTouchEnd <= 300) {
+                event.preventDefault();
+            } lastTouchEnd = now;
+        }, false);
+
+
         start();
     });
 
