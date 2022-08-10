@@ -7,10 +7,10 @@
     left: 0;
     right: 0;
     bottom: 0;
-    -webkit-animation: snow 16s linear infinite;
+    -webkit-animation: snow 10s linear infinite;
     animation: snow 10s linear infinite;
     pointer-events: none;
-    background-size: 600px auto
+    background-size: 500px auto
 }
 
 .forsythia-bg {
