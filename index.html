@@ -958,22 +958,6 @@
             document.getElementById('snow-bg').setAttribute('style','top:0px;width: ' + document.documentElement.offsetWidth + ';height:' + document.documentElement.offsetHeight +'px');
         }
 
-        document.documentElement.addEventListener('touchstart', function (event) {
-            if (event.touches.length > 1) {
-                event.preventDefault();
-            }
-        }, false);
-
-        var lastTouchEnd = 0;
-
-        document.documentElement.addEventListener('touchend', function (event) {
-            var now = (new Date()).getTime();
-            if (now - lastTouchEnd <= 300) {
-                event.preventDefault();
-            } lastTouchEnd = now;
-        }, false);
-
-
         start();
     });
 
