@@ -1653,8 +1653,8 @@ input[type=submit]:disabled, input[type=submit]:hover:disabled {
 
 .banner-text.light {
     color: #FFF;
-    border-top: ridge #fff;
-    border-bottom: ridge #fff;
+    border-top: ridge 0.5px #e1e1e1;
+    border-bottom: ridge 0.5px #e1e1e1;
 }
 
 .banner-text.light * {
